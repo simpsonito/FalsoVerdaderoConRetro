@@ -1,0 +1,143 @@
+@charset "UTF-8";
+body
+{
+	margin: 1em;
+	padding: 0;
+	background:#FFF;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#main
+{
+	max-width: 960px;
+	margin: 0px auto 0 auto;
+	background: white;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+    border-radius: 8px;
+	padding: 10px 10px 30px 30px;
+	border: 1px solid #adaa9f;
+	-moz-box-shadow: 0 2px 2px #9c9c9c;
+	-webkit-box-shadow: 0 2px 2px #9c9c9c;
+    box-shadow: 0 2px 2px #9c9c9c;
+}
+
+/*Features table------------------------------------------------------------*/
+.features-table
+{
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-shadow: 0 1px 0 #fff;
+  color: #2a2a2a;
+  background: #fafafa;  
+  background-image: -moz-linear-gradient(top, #fff, #eaeaea, #fff); /* Firefox 3.6 */
+  background-image: -webkit-gradient(linear,center bottom,center top,from(#fff),color-stop(0.5, #eaeaea),to(#fff)); 
+}
+
+.features-table td
+{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  border-bottom: 1px solid #cdcdcd;
+  box-shadow: 0 1px 0 white;
+  -moz-box-shadow: 0 1px 0 white;
+  -webkit-box-shadow: 0 1px 0 white;
+  
+  text-align: center;
+}
+
+/*Body*/
+.features-table tbody td
+{
+  text-align: left;
+  font: normal 12px Verdana, Arial, Helvetica;
+  
+}
+
+.features-table tbody td:first-child{
+  
+}
+
+.features-table td:nth-child(2), .features-table td:nth-child(3)
+{
+  background: #efefef;
+  background: rgba(144,144,144,0.15);
+  border-right: 1px solid white;
+}
+
+
+.features-table td:nth-child(4)
+{
+  background: #e7f3d4;  
+  background: rgba(184,243,85,0.3);
+}
+
+/*Header*/
+.features-table thead td
+{
+  font: bold 1.3em 'trebuchet MS', 'Lucida Sans', Arial;  
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px; 
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top: 1px solid #eaeaea; 
+}
+
+.features-table thead td:first-child
+{
+  border-top: none;
+}
+
+/*Footer*/
+.features-table tfoot td
+{
+  font: bold 1.4em Georgia;  
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px; 
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom: 1px solid #dadada;
+}
+
+.features-table tfoot td:first-child
+{
+  border-bottom: none;
+}/* CSS Document */
+
+
+/* Estilo para los botenes */
+button,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+    height: 40px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-right: 0px;	
+    padding: 10px;
+    clear: none;
+    color: rgba(255, 255, 255, 1);	
+	background-color: #3391f5;
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
+	border-color: #666;	
+}
+button:hover,
+html input:hover[type="button"], /* 1 */
+input:hover[type="reset"],
+input:hover[type="submit"] {
+    color: rgba(8, 84, 135, .9);
+	background-color: rgba(255, 255, 255, 1);
+	border-color: #999;	
+	
+	transition: 		color 500ms ease, background-color 500ms ease;
+	-webkit-transition: color 500ms ease, background-color 500ms ease;
+}
