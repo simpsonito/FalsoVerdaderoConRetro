@@ -1,5 +1,6 @@
 /**
- * Created by adib on 27/08/14.
+ * Creado por Adib Abud Jaso el 27/08/14.
+ * Modificado por Adib Abud Jaso el 06/11/14.
  */
 var buenas = 0;
 var bodyOriginal;
@@ -24,7 +25,7 @@ function alCargar(e){
     //alert("cargó :)");
     //Pregunta.conjunto = shuffle(Pregunta.conjunto);//Remover esta l&iacute;nea si no se quiere revolver
     for (var i=0; i<Pregunta.conjunto.length; i++) {
-        document.getElementById("cuerpoPreguntas").innerHTML += "<tr class='setPregunta'><td class='preguntaOpciones'><img class='palomita' style='display:none' src='palomita.png' /><img class='tache' style='display:none' src='tache.png' /><input type='radio' name='pregunta"+i+"' value='true'> </td><td class='preguntaOpciones'><input type='radio' name='pregunta"+i+"' value='false'> </td><td class='preguntaTexto'>" + Pregunta.conjunto[i].datos.texto + "</td></tr><tr class='retroInactiva'><td colspan='3'>"+Pregunta.conjunto[i].datos.retro+"</td></tr>";
+        document.getElementById("cuerpoPreguntas").innerHTML += "<tr class='setPregunta'><td class='preguntaOpciones'><img class='palomita' style='display:none' src='css/palomita.png' /><img class='tache' style='display:none' src='css/tache.png' /><input type='radio' name='pregunta"+i+"' value='true'> </td><td class='preguntaOpciones'><input type='radio' name='pregunta"+i+"' value='false'> </td><td class='preguntaTexto'>" + Pregunta.conjunto[i].datos.texto + "</td></tr><tr class='retroInactiva'><td colspan='3'>"+Pregunta.conjunto[i].datos.retro+"</td></tr>";
     }
     bodyOriginal = document.body.innerHTML;
     iniciar();
@@ -75,23 +76,17 @@ function revisarReactivo(numero){
         }
     }
 }
-
 function retroalimentar(texto){
     document.getElementById("retroalimentacion").innerHTML = texto;
     document.getElementById("retroalimentacion").scrollIntoView();
 }
-
 function shuffle(array) {
-    var currentIndex = array.length
-        , temporaryValue
-        , randomIndex
-        ;
+    var currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-
         // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
