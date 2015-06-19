@@ -77,6 +77,7 @@ function revisarReactivo(numero){
     var radios = document.getElementsByName('pregunta'+numero);
     document.getElementsByClassName('palomita').item(numero).style.display = "none";
     document.getElementsByClassName('tache').item(numero).style.display = "none";
+    var bien;
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
             // do whatever you want with the checked radio
@@ -85,8 +86,10 @@ function revisarReactivo(numero){
             if(radios[i].value.toString() == Pregunta.conjunto[numero].datos.valor.toString()){
                 buenas++;
                 document.getElementsByClassName('palomita').item(numero).style.display = "";
+                bien = true;
             } else {
                 document.getElementsByClassName('tache').item(numero).style.display = "";
+                bien = false;
             }
             Pregunta.conjunto[numero].contestada = true;//Si tiene algún radiobotón checked, está contestada
             break;
