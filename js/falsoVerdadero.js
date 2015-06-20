@@ -1,6 +1,6 @@
 /**
  * Creado por Adib Abud Jaso el 27/08/14.
- * Modificado por Adib Abud Jaso el 06/11/14.
+ * falso verdadero con retros correcto e incorrecto (Adib Abud Jaso 20/06/15).
  */
 var buenas = 0;
 var bodyOriginal;
@@ -11,13 +11,10 @@ function Pregunta(objetoConDatos) {
 }
 Pregunta.conjunto = [];//Aquí se almacenan las preguntas
 Pregunta.haTerminado = function(){
-    var p;
-    for(p = 0; p < this.conjunto.length; p++){
-        if(!this.conjunto[p].contestada){
-            return false;
-        }
-    }
-    return true;
+    "use strict";
+    return this.conjunto.every(function(pregunta){
+    	return pregunta.contestada;
+    });
 };
 new Pregunta({texto:"<b>1.</b> Los peces est&aacute;n muriendo a causa de la contaminaci&oacute;n.", valor:true, retro:{bien:"Muy bien!", mal:"Muy mal!"}});
 new Pregunta({texto:"<b>2.</b> La lluvia enfr&iacute;a el palpitar de mi coraz&oacute;n.", valor:false, retro:{bien:"correcto", mal:"Incorrecto"}});
