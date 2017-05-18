@@ -78,7 +78,7 @@ function revisarReactivo(numero){
 }
 function retroalimentar(texto){
     document.getElementById("retroalimentacion").innerHTML = texto;
-    document.getElementById("retroalimentacion").scrollIntoView();
+    //document.getElementById("retroalimentacion").scrollIntoView();
 }
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
